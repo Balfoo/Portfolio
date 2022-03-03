@@ -1,0 +1,44 @@
+body{
+    background-color: #21201C;
+}
+
+h1{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+#img{
+    position: relative;
+    width: 30%;
+    bottom: 105px;
+}
+
+#h1{
+    position: absolute;
+    top: 186px;
+    left: 482px;
+}
+
+#h3{
+    position: absolute;
+    top: 295px;
+}
+
+#site{
+    position: relative;
+    right: 490px;
+    bottom: 56px;
+}
+
+#submit{
+    bottom: 2px;
+    position: relative;
+    right: 365px;
+}

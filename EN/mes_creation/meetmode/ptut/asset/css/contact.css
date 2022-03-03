@@ -1,0 +1,33 @@
+.titre_contact { /*image de fond du titre*/
+    background: url("../image/Stylo-plume-en-bois-de-noyer.jpg") no-repeat center;
+    background-size: cover;
+    height: 18rem;
+  }
+
+  .corp_contact {
+    margin: 3rem 5rem;
+  }
+
+  .corp_contact #envoyer {
+    background: #E3DED3;
+    border: 1px solid #908364;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .corp_contact #envoyer:hover {
+    background: #21201C;
+    color: #F6F2E9;
+    transition: 300ms;
+  }
+
+   /* -- TELEPHONE --*/
+
+@media (max-width:803px) {
+
+  .corp_contact {
+    margin: 3rem 1rem;
+    font-size: 1.4rem;
+  }
+
+}

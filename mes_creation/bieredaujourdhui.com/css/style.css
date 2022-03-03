@@ -1,0 +1,209 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body{
+ font-family: 'Open Sans', Arial, sans-serif;
+}
+.text-center{
+ text-align: center;
+}
+.d-flex{
+ display: flex;
+}
+.container{
+ padding-right: 15px;
+ padding-left: 15px;
+}
+
+hr{
+ width: 30%;
+ display: block;
+ margin: 1rem auto;
+ border: .25px solid black;
+}
+header{
+ background-image: url("../images/banniere.jpg");
+ background-position: left;
+ background-size: cover;
+ height: 200px;
+ position: relative;
+}
+header div{
+ position: absolute;
+ top: 50%;
+ left: 10%;
+ transform: translate(-10%, -50%);
+ color: white;
+ line-height: 40px;
+}
+header div h3{
+ font-size: 3.5rem;
+ font-family: "Sofia";
+}
+header div p{
+ font-size: 25px;
+ font-style: italic;
+}
+
+
+/* Navigation */
+nav{
+ display: flex;
+ justify-content: space-around;
+ width: 70%;
+ margin: 2em auto 3em auto;
+}
+nav a{
+ padding: 20px 45px 10px;
+ background-color: black;
+ color: white;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-weight: bold;
+}
+nav a.active, nav a:hover{
+ border-bottom: 10px solid #a6521c;
+ color: #a6521c;
+}
+nav a:hover{
+ transition: all 150ms ease-in-out;
+}
+
+/* BiÃ¨res Ã  ne pas manquer */
+.bieres{
+ position: relative;
+}
+.bieres img{
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 200px;
+ width: auto;
+}
+.bieres p{
+ position: absolute;
+ top: 70px;
+ left: 100px;
+ transform: rotate(-13deg);
+ font-family: "Indie Flower";
+ color: white;
+ font-size: 3rem;
+ font-weight: bold;
+ z-index: 1;
+}
+.bieres p span{
+ display: block;
+ line-height: 35px;
+}
+.bieres h1{
+ font-size: 4rem;
+}
+.bieres h3{
+ font-size: 2rem;
+ font-weight: 600;
+}
+
+/* Section Articles */
+section.articles{
+ margin-top: 10rem;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+section.articles div.article{
+ border: 1px solid #a7521c;
+ border-radius: 10px;
+ padding: 20px;
+ margin: .5rem .5rem;
+ transform: translate3d(0,0,0) scale(1);
+ transition: transform 500ms;
+}
+
+section.articles div.article:hover{
+ transform: translate3d(0,0,0) scale(1.05);
+}
+
+section.articles div img{
+ height: 400px;
+ width: auto;
+}
+section.articles div h3{
+ font-family: "Sofia";
+ font-size: 2rem;
+ line-height: 45px;
+ margin-top: .5em;
+}
+section.articles div p{
+ font-size: 20px;
+ font-weight: 600;
+}
+section.articles div.info{
+ font-weight: 600;
+ margin: 2rem auto .8rem;
+ text-align: center;
+ border: 1px solid #808080;
+ border-radius: 5px;
+ width: 80%;
+}
+section.articles div.info span{
+ padding: 7px 15px;
+ font-size: 18px;
+ width: 100%;
+}
+section.articles div.info span:nth-child(-n+2){
+ border-right: 1px solid #808080;
+}
+section.articles div.info span:nth-child(3n){
+ width: 50%;
+}
+section.articles h1{
+ font-size: 3rem;
+ text-align: center;
+ font-weight: 500;
+}
+section.articles input{
+ display: block;
+ margin: .8rem auto 0;
+ text-align: center;
+ background-color: #6c3c17;
+ border-radius: 10px;
+ border: none;
+ padding: 5px 15px;
+ color: white;
+ font-size: 1.2rem;
+ font-weight: 600;
+ text-transform: uppercase;
+}
+
+
+/* Footer */
+
+footer{
+ height: 100px;
+ /*width: auto;
+ background-position: -3px -5px; */
+}
+footer .image-rognage {
+ position: relative;
+ width: 75px;
+ overflow: hidden;
+ display: block;
+ margin: 40px auto 20px;
+}
+footer img{
+ height: 100px;
+}
+footer p{
+ font-size: 18px;
+ color: black;
+ width: 19%;
+ display: block;
+ margin: auto auto 20px;
+ text-align: center;
+}
+footer p span{
+ color: #6c3c17;
+ font-weight: 600;
+}

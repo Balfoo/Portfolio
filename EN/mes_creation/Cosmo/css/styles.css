@@ -1,0 +1,635 @@
+/*
+http://alfweb.net/
+Aller dans cours
+login : mmi
+mdp : mmi
+*/
+
+html{
+    font-size: 62.5%;
+}
+body{
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*1rem = 10px*/
+
+.header{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.header-logo{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 994px){
+  .header-toogle{
+      display: none;
+  }
+}
+
+/*Pour afficher uniquement seulement pour certaines rÃ©solutions, afficher un Ã©lÃ©ment selon certains mÃ©dias (imprimantes (print) ou diffÃ©rents Ã©crans)*/
+/*En gros c'est donnÃ© une condition pour afficher quelque chose dans cette exemple*/
+@media screen and (max-width: 993px){
+  .header-toggle{
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 10px;
+  }
+  .header-toogle-close{
+    display: none;
+  }
+}
+.header-menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: #ffff;
+    margin-bottom: 20px;
+}
+
+.header-menu a{
+    padding: 5px;
+    color: #202020;
+    font-size: 2.5rem;
+    background: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+@media screen and (max-width: 993px){
+  .header-menu{
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    margin: 2rem auto;
+  }
+  .header-menu a{
+    border: 1px solid black;
+    display: block;
+  }
+
+  /* Lorsque je clique sur le bouton alors le bouton pour fermer s'affiche et l'autre s'efface et inversement */
+  #main-header:target .header-toogle-close{
+    display:inline;
+  }
+  #main-header:target .header-toogle-open{
+    display:none;
+  }
+  #main-header:target .header-menu, #main-header .header-menu{
+    transition: all 300ms ease-out;
+  }
+  #main-header:target .header-menu{
+    max-height: 250px;
+  }
+
+}
+.header-menu a:hover{
+    color: #fff;
+    background: #202020;
+    border-radius: 2px;
+    border-color: black;
+    transition: background-color ease-in 200ms, color ease-out .1s;
+}
+.short-text{
+  text-align: center;
+  background-color: #eee;
+  padding: 70px 20px;
+}
+
+
+.short-text p{
+  font-size: 1.8rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: auto;
+}
+.banner{
+    position: relative;
+    height: 70rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-desc{
+  z-index: 3;
+  text-align: center;
+}
+.banner-desc h1{
+  font-family: "Reenie Beanie";
+  color: white;
+  font-size: 15rem;
+}
+@media screen and (max-width: 993px){
+  .banner-desc h1 {
+    font-size: 6rem;
+  }
+}
+a.btn{
+  padding: .8rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+.btn-white{
+  color: white;
+  border: 3px solid white;
+}
+.banner-video, .banner-video-overlay{
+  position: absolute;
+}
+.three-women{
+  width: 100%;
+}
+.three-women div{
+  display: flex;
+}
+@media screen and (max-width: 993px){
+  .three-women div {
+    flex-direction: column;
+  }
+}
+a.three-women-item{
+  flex-grow: 1; /* Les trois colonnes ont la mÃªme largeur et prenne toute la largeur */
+  overflow: hidden;
+}
+.effect-img img{
+  width: 100%;
+}
+.three-women-item img{
+  width: 100%; /* ca vous devez dÃ©jÃ  l'avoir mis */
+  transition:  transform 500ms;
+  transform: translate3d(0,0,0) scale(1.15);
+}
+
+.three-women-item:hover img{
+  transform: translate3d(0,0,0) scale(1.05);
+}
+.effect-img{
+  position: relative;
+}
+.effect-img figcaption{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+figcaption .title-like{
+  font-family: "Reenie Beanie";
+  font-size: 6.3rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+figcaption span.btn-white{
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 10px 30px;
+  border: 2px solid white;
+}
+
+/* Fin - Section Three Femmes */
+
+
+/* Section confidence */
+section.confidence{
+  background-image: url('../images/confidence-bg.png');
+  position: relative;
+  padding-top: 3rem;
+  background-repeat-y: no-repeat;
+  background-size: cover;
+}
+section.confidence .confidence-visuel{
+  background-position: center;
+  position: relative;
+}
+.confidence-item{
+  display: flex;
+}
+.confidence-decor{
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+.confidence-intro{
+  padding: 0 0 0 15rem;
+  margin-top: 15vh;
+  margin-bottom: auto;
+  flex-basis: 30%;
+}
+.confidence-intro h3{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.confidence-intro h2{
+  font-family: "Reenie Beanie";
+  font-size: 6rem;
+  color: white;
+  padding-top: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 40px;
+  margin-bottom: 3rem;
+}
+.confidence-intro p{
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.link{
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.visible-sm-inline-block{
+  display: none;
+}
+.confidence-produits{
+  flex-basis: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.confidence-prix{
+  position: absolute;
+  top: 50%;
+  display: grid;
+  left: 50%;
+  color: white;
+}
+.confidence-prix .designation, .confidence-prix .prix{
+  padding-left: 2rem;
+}
+.designation{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.prix{
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+.prix span{
+  font-size: 1.45rem;
+  display: block;
+  margin-top: 1rem;
+}
+.btn-white.hidden-sm{
+  font-weight: normal!important;
+  font-size: 2rem;
+  border: 2px solid white;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 993px){
+  .confidence-decor{
+    display: none;
+  }
+  .confidence-item {
+    flex-direction: column;
+  }
+  .confidence-intro {
+    padding: 3rem;
+    margin-top: 0vh;
+    margin: 0;
+    flex-basis: unset;
+    text-align: center;
+  }
+  .visible-sm-inline-block {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 4rem;
+  }
+  .hidden-sm.hidden-xs{
+    display: none;
+  }
+  .confidence-prix {
+    top: 75%;
+    left: 60%;
+  }
+}
+/* Fin section confidence */
+
+
+/* Section Tendances */
+
+.tendances{
+  display: flex;
+}
+.tendances-item{
+  flex-basis: 50%;
+}
+.tendances-item.tendances-img{
+  background-position-x: -450px;
+}
+.tendances-inverse{
+  flex-direction: row-reverse;
+}
+.tendances-inverse .tendances-img{
+  background-position: top;
+    background-position-y: center;
+}
+.tendances-img{
+  height: 750px;
+  position: relative;
+}
+.tendances-img span{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10rem;
+  line-height: 10rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tendances-item.tendances-txt{
+  padding: 0 10rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.tendances-item.tendances-txt h3{
+  text-align: left!important;
+  line-height: 1;
+  margin-top: 0!important;
+  margin-bottom: 1rem!important;
+}
+.tendances-item.tendances-txt p{
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+.tendances-item.tendances-txt a{
+  color: rgb(95, 136, 166);
+  text-decoration: none;
+}
+.btn-grey{
+  color: black!important;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 993px){
+  .tendances{
+    flex-direction: column;
+  }
+  .tendances-img {
+    height: 350px;
+  }
+  .tendances-item {
+    flex-basis: unset;
+  }
+  .tendances-item.tendances-txt {
+    padding: 3rem 3rem 4rem;
+  }
+  .tendances-item.tendances-txt a {
+    font-size: 2rem;
+  }
+}
+/* Fin Section Tendances */
+
+/* Section Article */
+
+.articles{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h4.title-like, .tendances-txt h3.title-like{
+  font-family: "Reenie Beanie";
+  font-size: 8rem;
+  font-weight: lighter;
+  margin: 5rem 0;
+  text-align: center;
+}
+.articles > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 3rem
+}
+.articles > div > div{
+  flex-basis: 30%;
+  margin-bottom: 2rem;
+}
+.articles a, .articles a:visited{
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 2.5rem;
+  background-color: #eeeeee;
+  padding: 4%;
+}
+.articles a span.articles-date{
+  display: block;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+}
+.articles a span.articles-date:after {
+    display: block;
+    width: 80px;
+    border-bottom: .8px solid black;
+    content: '';
+    position: relative;
+    margin: 5px 0 3rem 0;
+    left: 50%;                   /* on le centre mais c'est l'origine qui est centrÃ©e :(*/
+    transform: translateX(-50%);
+}
+.articles-title{
+  font-size: 2rem;
+}
+.articles img{
+  width: 100%;
+}
+.articles-img{
+    position: relative;
+    margin-top: 2rem;
+  }
+.articles-over {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    transition: opacity 300ms ease-in-out;
+    overflow: hidden;
+  }
+  .articles-over > span{
+    position: absolute;
+    top: 100%;
+    transform: translateY(100%) translateX(-50%);
+  }
+  .articles-img:hover .articles-over {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out
+  }
+  .articles-img:hover .articles-over > span{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    transition: top 200ms ease-in-out
+  }
+
+  @media screen and (max-width: 993px){
+    .articles > div {
+    flex-direction: column;
+    }
+  }
+/* Fin Section Article */
+
+
+/* Section Bon Plan */
+
+section.bons-plans{
+  padding: 30px 0 40px 0px;;
+  background-color: #eeeeee;
+  text-align: center;
+  background-image: url('../images/bon-reduction.png');
+  background-repeat: no-repeat;
+  background-position: 41% 50%;
+  background-size: 20em;
+}
+.bons-plans .title-like{
+  font-family: "Reenie Beanie";
+  font-size: 10rem;
+  font-weight: lighter;
+  margin-bottom: 5rem;
+}
+.bons-plans form{
+  width: 552px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bons-plans form div{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  height: 7rem;
+  font-size: 2rem;
+}
+.bons-plans form input[type="email"]{
+  flex-basis: 60%;
+  padding-left: 1rem;
+}
+.bons-plans form input[type="submit"]{
+  flex-basis: 40%;
+  text-transform: uppercase;
+  border: 2.3px solid black;
+  font-weight: 600;
+}
+.bons-plans form p{
+  font-size: 2.8rem;
+  margin-left: 50%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+  @media screen and (max-width: 769px){
+    section.bons-plans{
+      background-position: 50% 30%;
+      background-size: 12em;
+    }
+    .bons-plans .title-like {
+      font-size: 6rem;
+      font-weight: 100;
+      margin-bottom: 2rem;
+    }
+    .bons-plans form {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bons-plans form p{
+      margin: 15rem 0 3rem;
+      font-size: 2.1rem;
+      text-align: center;
+    }
+    .bons-plans form div {
+      flex-direction: column;
+      height: 9rem;
+    }
+  }
+
+/* Fin Section Bon plan */
+
+
+/* ------------------------------------------ */
+/*        footer     */
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.footer-socials a{
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  background-image: url("../images/socials.jpg");
+}
+#btn-fb{
+  background-position: -3px -5px;
+}
+#btn-fb:hover{
+  background-position: -3px -52px;
+}
+#btn-tw{
+  background-position: -64px -5px;
+}
+#btn-tw:hover{
+  background-position: -64px -52px;
+}
+#btn-yt{
+  background-position: -126px -5px;
+}
+#btn-yt:hover{
+  background-position: -126px -52px;
+}
+#btn-it{
+  background-position: -189px -5px;
+}
+#btn-it:hover{
+  background-position: -189px -52px;
+}
+#btn-tu{
+  background-position: -251px -5px;
+}
+#btn-tu:hover{
+  background-position: -251px -52px;
+}
+footer{
+  text-align: center;
+  margin: 10px 0;
+}
+footer p{
+  font-family: "Reenie Beanie";
+  font-size: 3.8rem;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+footer a{
+  margin: 0px 12px 0px 12px;
+}

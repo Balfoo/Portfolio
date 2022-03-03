@@ -1,0 +1,41 @@
+apres footer-sociale 
+
+#btn-fb {
+    background-position: -3px -5px;
+}
+
+#btn-fb:hover {
+    background-position: -3px -52px;
+}
+
+#btn-tw {
+    background-position: -64px -5px;
+}
+
+#btn-tw:hover {
+    background-position: -64px -52px;
+}
+
+#btn-yt {
+    background-position: -126px -5px;
+}
+
+#btn-yt:hover {
+    background-position: -126px -52px;
+}
+
+#btn-it {
+    background-position: -189px -5px;
+}
+
+#btn-it:hover {
+    background-position: -189px -52px;
+}
+
+#btn-tu {
+    background-position: -251px -5px;
+}
+
+#btn-tu:hover {
+    background-position: -251px -52px;
+}

@@ -1,0 +1,32 @@
+// Import FONT
+// // Roboto & Raleway (400 & 700)
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+
+@import "./_variables";
+@import "./_mixins";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  display: block;
+  margin: auto;
+  @include xlmin(){
+    width: 1500px;
+  }
+  @include xl(){
+    width: fit-content;
+  }
+  overflow-x: hidden;
+}
+.position-relative{
+  position: relative;
+}
+
+
+@import "./_header.scss";
+@import "./sections/_boue.scss";
+@import "./sections/_projets.scss";
+@import "./sections/_convaincus.scss";
+@import "./_footer.scss";

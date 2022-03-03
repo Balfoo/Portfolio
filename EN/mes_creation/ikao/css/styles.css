@@ -1,0 +1,958 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat';
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pre-header > div{
+  background-color:#282828;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pre-header{
+  background-color:#282828
+}
+
+#pre-header_coords{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:100%;
+  text-decoration: none;
+}
+#pre-header_coords a{
+  text-decoration:none;
+  color:#a1a1a1;
+  padding:12px 10px 12px 7px;
+  font-size:0.7rem;
+  font-weight: bold;
+}
+#pre-header_coords a i{
+  margin-right:5px;
+}
+#pre-header_coords a:nth-child(1){
+  background-color:#3f3e43;
+  padding-right:20px;
+}
+#pre-header_coords a:nth-child(2){
+  padding-left:20px;
+}
+
+#pre-header_account{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height:100%;
+}
+#pre-header_account a{
+  text-decoration:none;
+  color:#a1a1a1;
+  padding:12px 10px 12px 7px;
+  background-color:#3f3e43;
+  font-size:0.7rem;
+  font-weight: bold;
+}
+.main-header{
+display: flex;
+align-items: center;
+padding: 5px;
+}
+.main-header nav {
+margin-left: auto;
+text-transform: uppercase;
+text-decoration: none;
+display: flex;
+align-items: center;
+}
+.main-header nav a {
+text-decoration: none;
+padding-left: 50px;
+}
+.main-header nav a, .main-header nav:active{
+color: #484848;
+}
+.main-header nav a::after{
+display: block;
+content: '';
+border-bottom: solid 3px #282828;
+transform: scaleX(0);
+transition: all 700ms;
+}
+.main-header nav a:hover::after{
+transform: scaleX(1);
+}
+
+#icone-menu-ouvrir {
+  display: none;
+}
+
+.main-header nav a i {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.main-header nav a.panier{
+display: flex;
+}
+.main-header nav a.panier span{
+display: block;
+font-size: .8em;
+padding-left: 10px;
+}
+.main-header nav a.panier span:nth-child(0n+1){
+font-size: .9em;
+font-weight: bold;
+color: black;
+}
+
+/* *************** LES PRODUITS *************** */
+.products-grid {
+  display: grid;
+  grid-template-columns: .33fr .17fr .25fr .25fr;
+  grid-auto-rows: 250px;
+  grid-gap: 20px;
+  grid-template-areas:
+      "new-co new-co canape coussins"
+      "new-co new-co canape accoudoirs"
+      "zio tabouret tabouret tabouret"
+      "totem tabouret tabouret tabouret";
+}
+.products-grid a{
+transition: opacity 300ms ease-in-out;
+}
+.products-grid a:hover{
+opacity: 0.9;
+}
+/* Produit nÂ°1 */
+
+#product-item1 {
+background-image: url('../images/meubles/nouvellecollection.jpg');
+grid-area: new-co;
+background-size: 135%;
+background-position: left;
+background-repeat: no-repeat;
+background-position-y: -10px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+#product-item1 span {
+  padding-top: 15px;
+}
+
+#product-item1 span:first-child{
+text-transform: uppercase;
+font-weight: 700;
+color: white;
+font-size: 12px;
+background-color: #535353;
+padding: 12px 50px 12px 10px;
+max-width: 300px;
+letter-spacing: 4px;
+margin-left: 50px;
+}
+
+#product-item1 span:nth-child(0n+2){
+color: white;
+font-size: 3rem;
+font-weight: 700;
+padding-left: 50px;
+}
+
+#product-item1 span:nth-child(0n+2) span {
+  font-weight: 300;
+  padding-left: 0px;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+#product-item1 span:nth-child(0n+3){
+font-size: 1rem;
+color: white;
+font-weight: 500;
+line-height: 1.2;
+padding-left: 50px;
+}
+
+#product-item1 span:nth-child(0n+4){
+font-size: 2rem;
+color: white;
+font-weight: 400;
+padding: 15px 0 80px 50px;
+}
+
+/* Produit nÂ°2 */
+
+#product-item2{
+background-image: url(../images/meubles/canape3places.jpg);
+grid-area: canape;
+background-size: cover;
+background-position: -115px;
+display: flex;
+flex-direction:column;
+align-items : flex-start;
+color: white;
+position: relative;
+}
+
+#product-item2 span{
+padding-bottom: 20px;
+padding-left: 20px;
+}
+
+#product-item2 span:first-child{
+text-transform: uppercase;
+font-size: 12px;
+letter-spacing: 4px;
+font-weight: 500;
+padding-top: 20px;
+}
+#product-item2 span:nth-child(0n+2){
+font-weight: 700;
+font-size: 20px;
+}
+#product-item2 span:nth-child(0n+3){
+text-transform: uppercase;
+font-size: .9em;
+}
+#product-item2 span:nth-child(0n+3) i{
+position: relative;
+}
+#product-item2 span:nth-child(0n+3) i:after{
+content: "";
+width: 25px;
+height: 25px;
+border-radius: 50%;
+border: 1px solid white;
+position: absolute;
+top: 0px;
+left: 0px;
+transform: translate(-8px, -8px);
+}
+#product-item2 .rondbleu {
+background-color: #62c5de;
+position: absolute;
+width: 130px;
+height: 130px;
+border-radius: 100px;
+top: 50%;
+right: 10%;
+color: white;
+font-size: 1.4em;
+}
+#product-item2 .rondbleu .texterond {
+position: absolute;
+top: 30%;
+left: 15%;
+line-height: 25px;
+}
+#product-item2 .texterond p:nth-child(1) {
+text-transform: uppercase;
+text-decoration: line-through;
+color: rgb(177 216 226);
+font-size: 0.8em;
+text-align: center;
+}
+
+/* Produit nÂ°3 */
+
+#product-item3 {
+background-image: url(../images/meubles/coussinsblancs.jpg);
+grid-area: coussins;
+background-size: 150%;
+background-position: 10% 35%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+#product-item3 span:first-child {
+  padding-top: 25px;
+}
+
+#product-item3 span {
+padding-bottom: 10px;
+color: black;
+font-weight: 700;
+font-size: 18px;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+#product-item3 span:nth-child(0n+3) {
+margin-top: auto;
+color: #991015;
+font-weight: 500;
+font-size: 25px;
+}
+
+#product-item3 span:nth-child(0n+3), #product-item3 span:nth-child(0n+4) {
+margin-left: auto;
+}
+
+#product-item3 span:nth-child(0n+4) {
+background-color: #2e2d32;
+color: white;
+font-weight: 400;
+font-size: 15px;
+text-align: center;
+width: 90px;
+top: 50%;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
+margin-right: 15px;
+margin-bottom: 15px;
+}
+
+/* Produit nÂ°4 */
+
+#product-item4 {
+background-image: url(../images/meubles/chaise-accourdoirs.jpg);
+grid-area: accoudoirs;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50px 50px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+#product-item4 span:first-child{
+padding-top: 20px;
+}
+
+#product-item4 span:first-child, #product-item4 span:nth-child(0n+2) {
+text-decoration: none;
+color: #2c3e66;
+text-transform: uppercase;
+font-size: 1.4rem;
+font-weight: bold;
+padding-left: 20px;
+}
+#product-item4 span:nth-child(0n+3){
+margin-top: auto;
+text-decoration: line-through;
+font-size: 1rem;
+}
+#product-item4 span:nth-child(1n+3){
+color: grey;
+padding-bottom: 10px;
+padding-left: 20px;
+}
+#product-item4 span:nth-child(0n+4){
+color: #2c3e66;
+font-size: 1.3rem;
+padding-bottom: 20px;
+}
+#product-item4 span:last-child{
+text-transform: uppercase;
+color: #2c3e66;
+font-size: 0.8rem;
+padding-bottom: 40px;
+}
+#product-item4 span:last-child{
+position: relative;
+}
+#product-item4 span:last-child span i{
+content: "";
+width: 25px;
+height: 25px;
+border-radius: 50%;
+background-color: white;
+border: 1px solid #2c3e66;
+position: absolute;
+transform: translate(-8px, -8px);
+}
+#product-item4 span:last-child span i::before{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+/* Produit nÂ°5 */
+
+#product-item5{
+background-color: #c6e6a1;
+background-image: url(../images/meubles/ziodinning.jpg);
+background-repeat: no-repeat;
+background-size: 60%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+color: white;
+padding-right: 15px;
+}
+#product-item5 > span:first-child{
+padding: 35px 0 5px 0;
+font-weight: 500;
+font-size: 1.5rem;
+letter-spacing: 3px;
+}
+#product-item5 span:nth-child(0n+2){
+font-size: 1.5rem;
+text-transform: uppercase;
+font-weight: bold;
+}
+#product-item5 span:nth-child(0n+3){
+margin-top: auto;
+letter-spacing: 0;
+font-weight: 400;
+padding-bottom: 25px;
+}
+#product-item5 span:nth-child(0n+3) span{
+padding-left: 10px;
+}
+#product-item5 span i{
+border-radius: 50%;
+background-color: #b1de89;
+border: 1px solid white;
+padding: 5px;
+}
+
+/* Produit nÂ°6 */
+
+#product-item6{
+background: linear-gradient(0deg,rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url(../images/meubles/tabouret.jpg);
+grid-area: tabouret;
+background-size: 170%;
+background-position: 60% 20%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+color: #535353;
+font-size: 1rem;
+line-height: 45px;
+padding-left: 4.5em;
+}
+
+#product-item6 > span:first-child{
+font-weight: 700;
+letter-spacing: 4px;
+padding-top: 4.5em;
+}
+
+#product-item6 span:nth-child(0n+2){
+font-weight: bold;
+font-size: 2.6rem;
+}
+
+#product-item6 span:nth-child(0n+3){
+font-size: 2.4rem;
+}
+
+
+/* Produit nÂ°7 */
+
+#product-item7 {
+  background-image: url(../images/meubles/totemfloor.jpg);
+  grid-area: totem;
+  background-size: 115%;
+  background-position: 46% 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #535353;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
+#product-item7 span:first-child{
+font-weight: 500;
+letter-spacing: 4px;
+color: #535353;
+padding-top: 20px;
+}
+#product-item7 span:nth-child(2){
+text-transform: uppercase;
+font-weight: bold;
+font-size: 1.4rem;
+}
+/* ***************************************** */
+/********* Section Product Selection *********/
+/* ***************************************** */
+
+.products-selection {
+  display: block;
+  margin: 30px auto;
+}
+
+.products-selection nav {
+  display: flex;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.products-selection nav a {
+  text-decoration: none;
+  border-right: 1px solid lightgray;
+  border-left: 2px;
+  color: black;
+}
+.products-selection nav a > *{
+padding: 10px;
+}
+.products-selection nav a:nth-child(n+2) h3{
+opacity: 0.5;
+}
+.products-selection nav a:last-child{
+border: none;
+}
+.products-selection nav a:hover h3 {
+  opacity: 1;
+}
+
+.products-selection .products-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.products-selection .imagefond {
+background-size: 300px;
+height: 280px;
+overflow: hidden;
+position: relative;
+transition: opacity 300ms ease-in-out;
+}
+.products-selection .products-list .products p, .products-selection .products-list .products h4 {
+padding-left: 20px;
+}
+.products-selection .products-list .products p {
+opacity: 0.7;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+.products-list .products .imagefond:hover{
+opacity: 0.8;
+cursor: pointer;
+}
+.products-list .products:nth-child(n+1) .imagefond{
+background-image: url(../images/meubles/bombichair1.png);
+}
+.products-list .products:nth-child(n+2) .imagefond{
+background-image: url(../images/meubles/seater.png);
+}
+.products-list .products:nth-child(n+3) .imagefond{
+background-image: url(../images/meubles/chairarmrests.png);
+}
+.products-list .products:nth-child(n+4) .imagefond{
+background-image: url(../images/meubles/bombichair.png);
+}
+.hover-product{
+position: absolute;
+background-color: white;
+width: 100%;
+bottom: 0;
+display: flex;
+align-items: center;
+height: 0px;
+overflow: hidden;
+color: grey;
+transition: height 300ms ease-in-out;
+}
+.products .imagefond:hover .hover-product{
+height: 14%;
+}
+.hover-product div a:hover {
+  color: black;
+}
+.hover-product div{
+border-bottom: 1px solid lightgray;
+border-right: 1px solid lightgray;
+text-align: center;
+padding: 10px;
+height: 100%;
+}
+.hover-product div:nth-child(0n+1) > * i{
+margin-right: 5px;
+}
+.acheter{
+width: 60%;
+border-left: 1px solid lightgray;
+}
+.like, .partage{
+width: 20%;
+}
+.hover-product div a {
+color: grey;
+text-decoration: none;
+}
+.products-selection .imagefond #reduc {
+position: absolute;
+margin-top: 50px;
+padding: 3px 7px;
+text-transform: uppercase;
+font-size: 15px;
+color: white;
+background-color: #b2cc29;
+opacity: 1;
+}
+
+
+/* Section - CatÃ©gories */
+.categories {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+.imagescat {
+width: auto;
+height: 230px;
+position: relative;
+overflow: hidden;
+transition: opacity 300ms ease-in-out;
+}
+.imagescat:nth-child(1) {
+background-image: url(../images/meubles/horloges.png);
+background-size: 400px;
+background-repeat: no-repeat;
+}
+.imagescat:hover {
+opacity: 0.8;
+}
+.imagescat:nth-child(2) {
+background-image: url(../images/meubles/tablebase.jpg);
+background-size: 600px;
+background-position: -135px -112px;
+background-repeat: no-repeat;
+}
+.imagescat:nth-child(3) {
+background-image: url(../images/meubles/lampes.png);
+background-size: 655px;
+background-position: -80px 0px;
+background-repeat: no-repeat;
+}
+.textcat {
+width: auto;
+position: absolute;
+top: 50px;
+left: 50px;
+background-color: transparent;
+line-height: 30px;
+}
+.textcat h2 {
+font-size: .85rem;
+color: grey;
+font-weight: bold;
+letter-spacing: 3.5px;
+}
+.textcat p {
+font-size: 1.4rem;
+font-weight: bold;
+letter-spacing: 2px;
+}
+.imagescat > p {
+position: absolute;
+bottom: 35px;
+left: 50px;
+text-transform: uppercase;
+color: grey;
+}
+.imagescat > p a {
+text-decoration: none;
+color: grey;
+}
+.voir {
+width: 25px;
+height: 25px;
+background-color: white;
+border: 2px solid lightgray;
+border-radius: 20px;
+position: absolute;
+bottom: 31px;
+left: 100px;
+text-align: center;
+}
+.voir i {
+font-size: 0.6rem;
+color: lightgray;
+font-weight: bold;
+}
+
+
+/* Section Best-products */
+.best-products div.d-grid{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 20px;
+}
+
+/* Photo article */
+.best-products div .article:nth-child(1) .image {
+  background-image: url(../images/meubles/puffchair.jpg);
+}
+.best-products div.article:nth-child(2) .image {
+  background-image: url(../images/meubles/daddychair.jpeg);
+  background-position: -70px;
+}
+.best-products div.article:nth-child(3) .image {
+  background-image: url(../images/meubles/woodchair.jpg);
+  background-position: -70px;
+}
+.best-products div.article:nth-child(4) .image {
+    background-image: url(../images/meubles/cheerschair.png);
+    background-position: 0px -70px;
+}
+.best-products div.article:nth-child(5) .image {
+    background-image: url(../images/meubles/loiretchair.jpg);
+}
+/* Hover Photo */
+.article .image:hover .hover-product, .article .image:hover{
+  height: 18%;
+  cursor: pointer;
+}
+
+.best-products div .article .image {
+  height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: opacity 300ms ease-in-out;
+}
+.best-products div .article .nomproduits {
+  opacity: 0.7;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+.products-selection .produts-list .products p, .products-selection .produts-list .products h4, .article h4 {
+  padding-left: 20px;
+}
+#new{
+position: absolute;
+margin-top: 30px;
+padding: 3px 7px;
+text-transform: uppercase;
+font-size: 13px;
+color: white;
+background-color: black;
+}
+#reduc {
+position: absolute;
+padding: 3px 7px;
+font-size: 13px;
+text-transform: uppercase;
+margin-top: 50px;
+background: #b2cc29;
+color: white;
+font-weight: bold;
+}
+.new1{
+margin-top: 70px!important;
+}
+
+/* ******************************* */
+/* ***** Section Partenaire ***** */
+/* ******************************* */
+
+.partners {
+display: block;
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.partners h2, .best-products > h2{
+text-transform: uppercase;
+padding-top: 60px;
+padding-bottom: 30px;
+}
+.partners #logospart {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: flex-end;
+font-size: 0.6rem;
+}
+.partners #logospart i{
+align-self: center;
+}
+.retourner {
+transform: rotate(180deg);
+}
+/*  Fin section Partenaire */
+
+/* Section Footer */
+
+footer {
+padding-top: 70px;
+background-color: #f6f6f6;
+font-size: 0.9rem;
+}
+
+.advantages-footer {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-bottom: 50px;
+border-bottom: 1px solid #e0e0e0;
+color: grey;
+}
+
+.advantages-footer .items-advantages {
+display: flex;
+align-items: center;
+}
+
+.advantages-footer .items-advantages i {
+font-size: 2rem;
+padding: 10px 20px 10px 0;
+}
+
+.items-advantages h4 {
+text-transform: uppercase;
+color: black;
+padding-bottom: 5px;
+font-size: 1rem;
+}
+.company-footer div{
+padding-bottom: 60px;
+}
+
+.main-footer {
+display: grid;
+grid-template-columns: 1fr 2fr;
+padding-top: 50px;
+padding-bottom: 50px;
+color: #868686;
+}
+
+.main-footer .company-footer #logo {
+width: 45%;
+height: auto;
+}
+
+.company-footer .sous-logo i {
+float: left;
+padding-right: 5px;
+}
+
+.main-footer ul {
+list-style: none;
+}
+
+.sous-logo li {
+padding-top: 10px;
+}
+
+.sous-logo ul li a {
+text-decoration: none;
+color: grey;
+}
+
+.sous-logo ul li a:hover {
+color: black;
+}
+
+.menu-footer {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.menu-footer .d-content{
+display: contents;
+}
+.menu-footer div h5 {
+padding-bottom: 15px;
+font-size: 1rem;
+font-weight: bold;
+color: #575757;
+}
+
+.main-footer ul {
+list-style: none;
+}
+
+.menu-footer div ul li {
+line-height: 45px;
+}
+
+.menu-footer div ul li a {
+text-decoration: none;
+color: grey;
+}
+
+.menu-footer div ul li a:hover{
+color: black;
+transition: color .3s ease-in-out;
+}
+
+/* Newsletter */
+.newsletter-footer h5 {
+text-align: right;
+}
+.newsletter-footer input[type="text"] {
+background-color: white;
+padding: 13px;
+border: 0;
+color: black;
+border-radius: 20px 0px 0px 20px;
+margin-right: -5px;
+width: 70%;
+}
+.newsletter-footer input[type="submit"] {
+background-color: #696969;
+padding: 13px;
+border: 0;
+color: white;
+border-radius: 0px 20px 20px 0px;
+width: 30%;
+cursor: pointer;
+}
+.icons-sociaux, .newsletter-footer {
+padding-top: 60px;
+}
+.menu-footer div h5 {
+padding-bottom: 15px;
+font-size: 1rem;
+font-weight: bold;
+color: #575757;
+}
+.icons-sociaux div {
+display: flex;
+justify-content: space-around;
+width: 70%;
+float: right;
+font-size: 1.3rem;
+}
+.icons-sociaux div a {
+text-decoration: none;
+color: grey;
+}
+
+/* Barre blanche footer */
+.sub-footer > .container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 20px auto;
+}
+.sub-footer__copyright {
+display: flex;
+align-items: center;
+}
+.sub-footer__copyright p:nth-child(1) {
+font-weight: bold;
+}
+.sub-footer__copyright p:nth-child(2){
+opacity: 0.5;
+}
+.sub-footer__payments i {
+font-size: 2.5rem;
+padding: 7px;
+}
+/* ******************************* */

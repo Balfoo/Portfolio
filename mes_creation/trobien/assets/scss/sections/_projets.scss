@@ -1,0 +1,138 @@
+section.project{
+  margin-top: 7rem;
+  text-align: center;
+  font-family: "Raleway";
+  @include xlmin(){
+    width: calc(1500px - 300px);
+  }
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 320px){
+    text-align: left;
+    width: auto;
+  }
+  & h1{
+    color: $color-rose;
+    margin-bottom: .8rem;
+    font-size: 3rem;
+    font-weight: 500;
+    @media (max-width: 320px){
+      padding-left: 15px;
+    }
+  }
+  & h3{
+    color: $color-grey;
+    font-size: 1.3rem;
+    margin: 0 0 50px 0;
+    font-weight: 700;
+    @media (max-width: 320px){
+      padding-left: 15px;
+    }
+  }
+  @media (min-width: 992px){
+    h1, h3{
+      transform: translate3d(0,0,0) scale(0);
+    }
+    &[data-scroll="in"] h1, &[data-scroll="in"] h3{
+      transition: 1s;
+      transform: translate3d(0,0,0) scale(1);
+    }
+    .project_img{
+      opacity: 0;
+    }
+
+    &[data-scroll="in"] .project_img{
+      transition: 1s;
+      opacity: 1;
+    }
+  }
+
+  & > div{
+    display: flex;
+    justify-content: space-around;
+
+    @include lg(){
+      flex-direction: column;
+    }
+
+    & div{
+      width: 30%;
+      height: 600px;
+      padding: 24px;
+      position: relative;
+      background-position: center;
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include lg(){
+        width: auto;
+      }
+      & h4 {
+        margin: 0;
+        font-weight: normal;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 2.3rem;
+        transform: rotate(-90deg);
+        transform-origin: center right;
+
+        @include lg(){
+          position: inherit;
+          transform: rotate(360deg);
+        }
+      }
+      & span{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-family: "Roboto";
+        text-align: left;
+        text-transform: uppercase;
+        @media (max-width: 320px){
+          font-size: 2rem;
+        }
+      }
+
+    }
+
+    & .project_img{
+      transition: transform 500ms;
+      transform: translate3d(0,0,0) scale(1);
+    }
+    & .project_img:hover{
+      transform: translate3d(0,0,0) scale(.95);
+    }
+
+    & .project_img:first-child{
+      background-image: url("../img/astronaut-1390007_1920.jpg");
+      & h4{
+        left: -5%;
+        @media (max-width: 320px){
+          left: 0;
+        }
+      }
+    }
+
+    & .project_img:nth-child(0n+2){
+      background-image: url("../img/technology-785742_1920.jpg");
+      & h4{
+        left: -35%;
+      }
+    }
+
+    & .project_img:last-child{
+      background-image: url("../img/woman-2435605_1920.jpg");
+      background-position: 15%;
+
+      & h4{
+        left: -25%;
+      }
+    }
+
+  }
+
+
+}

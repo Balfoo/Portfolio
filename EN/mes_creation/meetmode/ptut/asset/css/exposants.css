@@ -1,0 +1,101 @@
+.titre_exposants { /*image de fond du titre*/
+    background: url("../image/teximprim.jpg") no-repeat center;
+    background-size: cover;
+    height: 18rem;
+  }
+
+  .corp_exposants { 
+    margin: 0 5rem;
+  }
+
+  .section_exposants {
+    margin: 3rem 0;
+  }
+
+.photo_création_exposant {
+  width: 100%;
+}
+
+.tous_les_exposants {
+  display: flex;
+}
+
+.exposant {
+  border: solid 2px #21201C;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+.photo_profil_exposants {
+  margin: 2rem;
+  float: left;
+}
+
+.nom_exposant {
+  color: #F6F2E9;
+  background-color: black;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.catégorie_exposant {
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.info_exposants {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+  text-align: center;
+}
+
+.section_createurs .exposant {
+  background-color: #86D0FA;
+}
+
+.section_usines .exposant {
+  background-color: #FF8F60;
+}
+
+
+/* -- TELEPHONE --*/
+
+
+@media (max-width:1050px) {
+
+  .photo_profil_exposants {
+    float: none;
+    float: none;
+    margin: 1rem auto;
+    display: block;
+  }
+
+}
+
+@media (max-width:803px) {
+
+.corp_exposants {
+  margin: 0 1rem;
+}
+
+.tous_les_exposants {
+  flex-direction: column;
+}
+
+.photo_profil_exposants {
+  float: none;
+  float: none;
+  margin: 1rem auto;
+  display: block;
+}
+
+.info_exposants {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+
+
+}

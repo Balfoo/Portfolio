@@ -1,0 +1,84 @@
+.corp_presse {
+    margin: 3rem 5rem;
+}
+
+.titre_presse { /*image de fond du titre*/
+    background: url("../image/carnet.jpg") no-repeat center;
+    background-size: cover;
+    height: 18rem;
+    color: #21201C;
+}
+
+.presse_gras { 
+    font-weight: bold;
+    text-align: center;
+}
+
+.document_presse {
+    display: flex;
+    justify-content: space-around;
+}
+
+.document_presse h2 {
+    margin-bottom: 3rem;
+}
+
+.img_presse {
+    border: solid #21201C 2px;
+    border-radius: 10px;
+    transition:  transform 500ms;
+}
+
+/* Animation de lire l'article */
+.img_presse:hover { /* zoom */
+    transform: translate3d(0,0,0) scale(1.15);
+}
+
+.apperçu_document {
+    position: relative;
+}
+
+.dessus-document {
+    position: absolute;
+    right: 55px;
+    top: 260px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+.apperçu_document:hover .dessus-document {
+    opacity: 1;
+}
+
+.dessus-titre { /* Aspect du texte invitant à lire */
+    color: white;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+
+ /* -- TELEPHONE --*/
+
+ @media (max-width:803px) {
+
+    .corp_presse {
+        margin: 3rem 1rem;
+    }
+
+.document_presse {
+    flex-direction: column;
+  }
+  
+  .document_presse h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .sous-document_presse img {
+    width: 100%;
+  }
+  
+  .sous-document_presse {
+    margin-bottom: 2rem;
+  }
+  
+ }

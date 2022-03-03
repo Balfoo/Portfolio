@@ -1,0 +1,65 @@
+
+.titre_infos_pratiques { /*image de fond du titre*/
+    background: url("../image/materiel-de-couture-indispensable.jpg") no-repeat center;
+    background-size: cover;
+    height: 18rem;
+  }
+
+/* div qui emglobe le reste du corp de la page, pour mettre une marge à droite et à gauche */
+.corp_infos { 
+  margin: 0 5rem;
+}
+
+/* DATE ET HORRAIRES */
+ 
+.dates_en_entier { /* marge en haut et en bas*/
+    margin: 3rem 0;
+  }
+  
+
+.dates p {
+    text-align: center;
+}
+
+/* CARTE ET ACCES */
+
+.plan_acces_en_entier { /* marge en haut et en bas*/
+    margin: 3rem 0;
+  }
+
+.plan_acces { /* flex */
+  display: flex;
+  justify-content: space-around;
+}
+
+.accès { /* marge du texte */
+  padding: 3rem;
+}
+
+.accès .gras { /* gras*/
+  font-weight: bold;
+}
+
+
+/* TELEPHONE */
+@media (max-width:803px) {
+
+
+  .corp_infos { 
+    margin: 0 1rem;
+  }
+
+.plan_acces {
+  flex-direction: column;
+}
+
+.carte iframe {
+  width: 100%;
+}
+
+.accès {
+  padding: 0;
+  text-align: center;
+}
+
+}

@@ -1,0 +1,221 @@
+section.boue, section.lumiere{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 8rem;
+  @include xlmin(){
+    width: calc(1500px - 100px);
+  }
+  margin-left: auto;
+  margin-right: auto;
+
+  & > div{
+    flex: 0 0 45%;
+    position: relative;
+  }
+
+  & h1{
+    font-family: "Raleway";
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: $color-rose;
+    position: relative;
+
+    &:before{
+      content: "";
+      background-image: url(../img/icones/quotes.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 2.5rem;
+      left: -4rem;
+    }
+  }
+
+  & p{
+    color: $color-grey;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  & a{
+    color: white;
+    font-family: "Raleway";
+    font-weight: 400;
+    background-color: $color-rose;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+}
+
+
+
+section.boue{
+  @include sm(){
+    justify-content: flex-end;
+  }
+  @media (max-width: 320px){
+    justify-content: center;
+    align-items: center;
+  }
+  & div:first-child{
+    max-width: 535px;
+    @media (min-width: 992px){
+
+      transition: 1s;
+      transform: translateX(200px);
+      opacity: 0;
+
+      &[data-scroll="in"]{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @media (max-width: 320px){
+      margin-right: 60px;
+    }
+  }
+  & .trait{
+    position: absolute;
+    background-color: $color-rose;
+    transform: rotate(145deg);
+    height: 3px;
+    display: block;
+    width: 0%;
+    right: 0rem;
+    top: 50%;
+    @include sm(){
+      top: 115%;
+      right: -5.8rem;
+      width: 65rem;
+    }
+    @include xs(){
+      display: none;
+    }
+  }
+
+  & [data-scroll="in"]{
+    .trait{
+      transition: 3s;
+      top: 105%;
+      right: -5.8rem;
+      width: 65rem;
+      @include sm(){
+        top: 121%;
+      }
+    }
+  }
+
+}
+
+section.lumiere {
+  margin-top: 20rem;
+  @include xl(){
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 320px){
+    width: auto;
+    justify-content: left;
+    margin-top: 8rem;
+
+    & div:first-child{
+      max-width: 630px;
+    }
+  }
+
+  & div:nth-child(0n+2){
+    max-width: 535px;
+    @media (min-width: 992px){
+
+      transition: 1s;
+      transform: translateX(200px);
+      opacity: 0;
+
+      &[data-scroll="in"]{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @media (max-width: 320px){
+      margin-right: 60px;
+    }
+  }
+
+  &[data-scroll="in"] svg{
+    & #Lamp1{
+      transform-origin: top center;
+      transform:rotate(60deg);
+      animation: lamp1 3s forwards;
+    }
+    & #Lamp2{
+      transform-origin: top center;
+      transform:rotate(45deg);
+      animation: lamp2 2s forwards;
+    }
+    & .st801_white{fill:white;}
+  }
+
+  & div:nth-child(0n+2){
+    max-width: 550px;
+    margin-left: 60px;
+  }
+
+  & h1::before{
+  display: none;
+  }
+
+  > *{
+    text-align: right;
+  }
+
+
+}
+
+section.boue div[data-scroll="in"] + div #MainH
+{
+  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
+  animation: move 2.1s;
+}
+
+section.boue div[data-scroll="in"] + div #MainB {
+  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
+  animation: translatemain 2.1s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes translatemain {
+  0% {
+    transform: translateY(-20px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes lamp1 {
+  0%{ transform:rotate(0deg) }
+
+  100%{ transform: translateY(-15px) rotate(-19deg) }
+}
+@keyframes lamp2 {
+  0%{ transform:rotate(0deg) }
+
+  100%{ transform: translateY(5px) rotate(-15deg) }
+}

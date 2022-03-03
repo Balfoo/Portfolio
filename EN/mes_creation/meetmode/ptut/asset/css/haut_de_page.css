@@ -1,0 +1,88 @@
+.bandeau_davertissement {
+    background-color: #21201cda;
+    height: 2rem;
+  }
+  
+  .bandeau_davertissement p {
+    color: red;
+    margin: 0;
+    text-align: center;
+  }
+
+header {
+    background-color: #21201C;
+    min-height: 10rem;
+    height: 100%;
+}
+
+.header img {
+  width: 18rem;
+  }
+
+  #menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+   
+  #menu a {
+    margin: 0 2rem;
+    color: #F6F2E9;
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: Montserrat;
+  }
+  .header #language {
+    background: #E3DED3;
+    border: 1px solid #908364;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: 300ms;
+    font-size: 1.6rem;
+  }
+
+  .header #language:hover {
+    background: #21201c;
+    color: #F6F2E9;
+    transition: 300ms;
+  }
+
+
+  .posisition-fixe {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  /* --- TELEPHONE -- */
+
+@media (max-width:803px) {
+
+  .posisition-fixe {
+    position: relative;
+  }
+
+    .header {
+      flex-direction: column;
+      height: 100%;
+    }
+
+  .header img {
+  margin: -1rem 0;
+  }
+
+  .header #language {
+    position: relative;
+    left: 13rem;
+    bottom: 21rem;
+  }
+
+  .header #menu {
+    flex-direction: column;
+    line-height: 3.2rem;
+    text-align: center;
+  }
+
+  .bandeau_davertissement p {
+    font-size: 1.2rem;
+  }
+}

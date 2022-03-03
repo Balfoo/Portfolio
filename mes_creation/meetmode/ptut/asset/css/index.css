@@ -1,0 +1,144 @@
+.titre_accueil { /*image de fond du titre*/
+    background: url("../image/towel-1838210_1920.jpg") no-repeat center;
+    background-size: cover;
+    height: 50rem;
+  }
+
+  .corp_accueil { 
+    margin: 0 5rem;
+  }
+
+.titre_accueil h1 {
+    font-size: 15rem;
+    top: 17rem;
+    background-color: #F6F2E98A;
+  }
+
+/* PRESENTATION / VIDEO */
+
+.accueil_gras {
+    font-weight: bold;
+    text-align: center;
+    margin-top: -2rem;
+}
+
+  .accueil_presentation_video {
+    margin: 2rem 0;
+}
+
+.accueil_presentation_video h2 {
+    margin-right: 3rem;
+  }
+
+.accueil_presentation_video iframe {
+    width: 100rem;
+}
+
+.accueil_presentation_video > div {
+    display: flex;
+    align-items: center;
+}
+
+.texte_accueil_gras {
+  font-weight: bold;
+}
+
+.accueil_presentation_video > div:nth-child(1) > div:nth-child(1) > p:nth-child(3) {
+padding-right: 2rem;
+}
+
+/* LIENS CLIQUABLES */
+.accueil_liens {
+    margin: 2rem 0;
+}
+
+
+.accueil_lien_item {
+    flex-grow: 1; /* on étire chaque flex-item pour occuper toute la largeur disponible */
+    overflow: hidden; /* on cache ce qui dépasse du flex-item (utile pour l'effet de zoom) */
+  position: relative; /* le flex-item sert de "parent" de référence pour le positionnement absolu de la figcaption */
+}
+
+.accueil_liens > div {
+    display: flex;
+}
+
+.accueil_liens a { /* Apparence des mots */
+    text-decoration: none;
+}
+
+.accueil_liens h3 { /* Apparence des mots */
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 4rem;
+    color: #F6F2E9;
+    background-color: #21201C94;
+    width: 32rem;
+    text-align: center;
+}
+
+.accueil_lien_item figcaption { /* Superposition des mots */
+    position: relative;
+    bottom: 20rem;
+    margin: 0 6rem;
+  }
+
+  .accueil_lien_item img{ /*animation images*/ 
+    width: 100%;  /* on ajuste la taille de l'image à la largeur du flex-item */
+    transition:  transform 500ms; 
+    transform: translate3d(0,0,0) scale(1.15); /* effet de zoom en jouant sur le facteur d'échelle de l'image */
+  }
+
+  .accueil_lien_item:hover img{
+    transform: translate3d(0,0,0) scale(1.05);
+  }
+
+  /* CAROUSELLE */
+
+  .carouselle_accueil {
+      margin: 2rem 0;
+  }
+
+  .position-relative {
+    z-index: 0;
+   }
+
+   div.carouselle { /* Marge en bas */
+    margin-bottom: 4rem;
+   }
+   
+
+    /* -- TELEPHONE --*/
+
+@media (max-width:803px) {
+
+  .corp_accueil { 
+    margin: 2rem 1rem;
+  }
+
+.titre_accueil h1 {
+  font-size: 11rem;
+  top: 12rem;
+}
+
+.accueil_presentation_video > div {
+  flex-direction: column;
+}
+
+.accueil_presentation_video h2 {
+  margin: 0 -2rem 2rem -2rem;
+}
+
+.accueil_presentation_video > div:nth-child(1) > div:nth-child(1) > p:nth-child(3) {
+  text-align: justify;
+ }
+ 
+.accueil_presentation_video iframe {
+  width: 100%;
+}
+
+.accueil_liens > div {
+  flex-direction: column;
+}
+
+}

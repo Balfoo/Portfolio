@@ -1,0 +1,33 @@
+.titre_mention_legale { /*image de fond du titre*/
+    background: url("../image/ArtisanArt_header_m_tiers_d_art_artisans_d_art_textile.jpg") no-repeat center;
+    background-size: cover;
+    height: 18rem;
+  }
+
+.corp_mentions {
+    margin: 3rem 5rem;
+}
+
+.h2_mention_legale { /* espacement et taille h2 spécialement pour cette page */
+    text-align: left;
+    margin-top: 3rem;
+    font-size: 3.5rem;
+}
+
+.corp_mentions a {
+    font-size: 1.4rem;
+}
+
+ /* -- TELEPHONE --*/
+
+ @media (max-width:803px) {
+
+    .corp_mentions {
+        margin: 3rem 1rem;
+    }
+
+    .corp_mentions {
+        text-align: justify;
+    }
+
+ }

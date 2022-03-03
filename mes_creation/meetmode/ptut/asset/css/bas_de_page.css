@@ -1,0 +1,132 @@
+
+footer {
+    background-color: #21201C;
+    min-height: 33rem;
+    height: 100%;
+  }
+  
+ /* Logo des partenaires */
+.logo_partenaires img {
+    width: 8rem;
+    margin-top: 2rem
+}
+
+  .logo_partenaires {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+        padding-top: 1rem;
+        margin-left: 5rem;
+  }
+  
+  .logo_partenaires a {
+    margin: 0 1rem;
+  }
+
+/* lien du bas */
+  .float-end a { 
+    color: #F6F2E9;
+    font-family: Montserrat;
+  }
+  
+  .float-end {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: #F6F2E9;
+    font-size: 1.4rem;
+  }
+
+    /* Informations en bas */
+.infos_bas p {
+    color: #F6F2E9;
+  }
+  
+  .infos_bas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  
+  .bas_titre {
+    font-size: 1.6rem;
+  }
+  
+  .infos_bas a {
+    color: #F6F2E9;
+  }  
+
+  /* Réseaux sociaux */
+
+.réseaux_bas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.réseaux_bas p {
+  color: #F6F2E9;
+}
+
+.réseaux_bas a {
+  color: #F6F2E9;
+  margin: 0 0.3rem;
+}
+
+.réseaux_bas > p:nth-child(2) > a:nth-child(1) { /*Enlève de l'espacement */
+  margin: 0 0 0 -15rem;
+}
+
+.infos_bas > a:nth-child(3) > img:nth-child(1) { /*Flèche aller vers le haut */
+  width: 5%;
+  position: absolute;
+}
+
+/* -- TELEPHONE --*/
+
+@media (max-width:803px) {
+
+footer {
+  height: 100%;
+}
+
+.réseaux_bas {
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.réseaux_bas > p:nth-child(2) > a:nth-child(1) { /* décalage newslettre */
+  margin: 0;
+}
+
+.infos_bas {
+  margin: 0 2rem;
+}
+
+.infos_bas p {
+  padding: 0 1rem;
+  }
+
+.bas_titre {
+  font-weight: bold;
+}
+
+.float-end {
+  flex-direction: column;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.logo_partenaires {
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.réseaux_bas > p:nth-child(1) { /* marge autour des réseaux */
+  margin: 2rem 0;
+}
+
+}
